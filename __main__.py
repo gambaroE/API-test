@@ -5,12 +5,11 @@ from logger import Logger
 
 def main():
     logger = Logger()
+    logger.info("Benvenuto!")
     bq_api = BigQueryAPI()
     gcs_api = GCSAPI()
 
-    logger.info("Benvenuto!")
-    scelta = input(
-        "Quale operazione vuoi eseguire?\n1. Verifica esistenza tabella BigQuery\n2. Verifica esistenza bucket GCS\nScelta (1/2):")
+    scelta = input("Quale operazione vuoi eseguire?\n1. Verifica esistenza tabella BigQuery\n2. Verifica esistenza bucket GCS\nScelta (1/2):")
 
     if scelta == "1":
         table_path = input("Inserisci il nome della tabella (progetto.dataset.nome):\n")
