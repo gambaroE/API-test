@@ -1,0 +1,19 @@
+# Directory di configurazione di PyCharm
+.idea/
+
+# File di configurazione di PyCharm
+*.iml
+*.xml
+.idea_modules/
+*.ipr
+*.iws
+.idea/workspace.xml
+
+# File di configurazione dell'editor
+*.bak
+*.swp
+*~
+
+# File temporanei
+*.pyc
+__pycache__/
