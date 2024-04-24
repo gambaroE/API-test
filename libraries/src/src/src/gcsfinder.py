@@ -1,10 +1,11 @@
 from google.cloud import storage
+from logger import Logger
 
 
 class GCSAPI:
-    def __init__(self, logger):
+    logger = Logger()
+    def __init__(self):
         self.client = storage.Client()
-        self.logger = logger
 
     def check_bucket_existence(self, bucket_name):
         try:

@@ -1,24 +1,12 @@
 from bqfinder import BigQueryAPI
 from gcsfinder import GCSAPI
-import logging
-
-
-class Logger:
-    def __init__(self):
-        logging.basicConfig(level=logging.INFO)
-        self.logger = logging.getLogger(__name__)
-
-    def info(self, message):
-        self.logger.info(message)
-
-    def error(self, message):
-        self.logger.error(message)
+from logger import Logger
 
 
 def main():
     logger = Logger()
-    bq_api = BigQueryAPI(logger)
-    gcs_api = GCSAPI(logger)
+    bq_api = BigQueryAPI()
+    gcs_api = GCSAPI()
 
     logger.info("Benvenuto!")
     scelta = input(
