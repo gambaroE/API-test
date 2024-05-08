@@ -21,14 +21,11 @@ class TestMainFunctionality(unittest.TestCase):
         logger = Logger()
         bq_api = BigQueryAPI(logger)
 
-        # Mocking logger methods
         logger.info = MagicMock()
         logger.error = MagicMock()
 
-        # Call the main function
         main()
 
-        # Assertions
         bq_api.check_table_existence.assert_called_once_with("training-gcp-309207.Gambaro_api.test_api")
         logger.info.assert_any_call("Benvenuto!")
 
@@ -37,20 +34,15 @@ class TestMainFunctionality(unittest.TestCase):
         logger = Logger()
         gcs_api = GCSAPI(logger)
 
-        # Mocking logger methods
         logger.info = MagicMock()
         logger.error = MagicMock()
 
-        # Mocking check_bucket_existence method to return True
         gcs_api.check_bucket_existence = MagicMock(return_value=True)
 
-        # Mocking download_file_from_bucket method
         gcs_api.download_file_from_bucket = MagicMock()
 
-        # Call the main function
         main()
 
-        # Assertions
         gcs_api.check_bucket_existence.assert_called_once_with("gambaro_bucket")
         gcs_api.download_file_from_bucket.assert_called_once_with("gambaro_bucket", "ComandiGcloud.txt")
         logger.info.assert_any_call("Il bucket 'gambaro_bucket' esiste.")
@@ -61,14 +53,11 @@ class TestMainFunctionality(unittest.TestCase):
     def test_invalid_choice(self, mock_input):
         logger = Logger()
 
-        # Mocking logger methods
         logger.info = MagicMock()
         logger.error = MagicMock()
 
-        # Call the main function
         main()
 
-        # Assertions
         logger.error.assert_called_once_with("Scelta non valida.")
 
 if __name__ == "__main__":
