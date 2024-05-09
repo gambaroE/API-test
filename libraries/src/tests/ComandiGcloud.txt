@@ -1,0 +1,39 @@
+gcloud auth:
+gcloud auth activate-service-account: Autentica l'account di servizio utilizzando le chiavi JSON.
+
+gcloud auth application-default: Imposta le credenziali predefinite dell'applicazione.
+
+gcloud auth configure-docker: Configura Docker con le credenziali di Google Cloud.
+
+gcloud auth login: Effettua l'accesso interattivo a Google Cloud Platform.
+
+gcloud auth revoke: Revoca l'autenticazione corrente.
+
+gcloud auth list: Elenca gli account di autenticazione e mostra quello corrente.
+
+gcloud auth print-access-token: Stampa l'access token autenticato corrente.
+
+gcloud auth print-identity-token: Stampa l'identity token autenticato corrente.
+
+gcloud auth activate-refresh-token: Attiva un token di aggiornamento per l'autenticazione.
+
+gcloud auth application-default login: Effettua l'accesso con le credenziali predefinite dell'applicazione.
+
+gcloud auth application-default print-access-token: Stampa l'access token per le credenziali predefinite dell'applicazione.
+
+gcloud config:
+gcloud config set: Imposta una proprietà di configurazione.
+
+gcloud config get-value: Recupera il valore di una proprietà di configurazione.
+
+gcloud config unset: Rimuove una proprietà di configurazione.
+
+gcloud config list: Elenca tutte le proprietà di configurazione.
+
+gcloud config configurations activate: Attiva una configurazione specifica.
+
+gcloud config configurations create: Crea una nuova configurazione.
+
+gcloud config configurations delete: Elimina una configurazione.
+
+gcloud config configurations describe: Descrive una configurazione specifica.

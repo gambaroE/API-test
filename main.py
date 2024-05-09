@@ -6,8 +6,8 @@ from logger import Logger
 def main():
     logger = Logger()
     logger.info("Benvenuto!")
-    bq_api = BigQueryAPI()
-    gcs_api = GCSAPI()
+    bq_api = BigQueryAPI(logger)
+    gcs_api = GCSAPI(logger)
 
     scelta = input("Quale operazione vuoi eseguire?\n1. Verifica esistenza tabella BigQuery\n2. Verifica esistenza bucket GCS\nScelta (1/2):")
 

@@ -3,8 +3,8 @@ from logger import Logger
 
 
 class GCSAPI:
-    logger = Logger()
-    def __init__(self):
+    def __init__(self, logger):
+        self.logger = logger
         self.client = storage.Client()
 
     def check_bucket_existence(self, bucket_name):

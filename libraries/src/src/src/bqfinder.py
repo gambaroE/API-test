@@ -1,10 +1,8 @@
 from google.cloud import bigquery
-from logger import Logger
-
 
 class BigQueryAPI:
-    logger = Logger()
-    def __init__(self):
+    def __init__(self, logger):
+        self.logger = logger
         self.client = bigquery.Client()
 
     def check_table_existence(self, table_path):
